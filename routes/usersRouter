@@ -3,7 +3,7 @@ const {Router} = require('express');
 usersController = require('./controllers/usersController')
 usersRouter = Router();
 
-usersRouter.get('/', usersController.getAllUserNames);
+usersRouter.get('/', usersController.getAllUsernames);
 usersRouter.get('/new', userController.getNewUsername);
 usersRouter.post('/new', userController.postNewUsername);
 

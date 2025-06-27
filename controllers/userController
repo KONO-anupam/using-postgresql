@@ -1,0 +1,22 @@
+const {validationResult} = require('express-validator');
+
+exports.getAllUsernames = (req, res) =>{
+  console.log("usernames will be logged here - wip")
+}
+
+exports.getNewUsername = (req,res) =>{
+  const path = require('path');
+  res.sendFile(path.join(__dirname, '..views/new.html'))
+}
+
+
+exports.postNewUsername = (req,res) =>{
+
+  const errors = validationResult(req);
+  if(!errors.isEmpty()){
+    return res.status(400).send('Invalid input:'+JSON.stringify(errors.array()));
+  }
+
+  const username = req.body.username; 
+  console.log("username to be saved", username);
+}
