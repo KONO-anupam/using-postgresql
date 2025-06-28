@@ -1,5 +1,5 @@
-require('dotenv').config()
-
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../config/.env') });
 const { Pool } = require('pg')
 
 module.exports = new Pool({

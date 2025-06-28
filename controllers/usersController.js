@@ -8,7 +8,7 @@ res.send("Usernames:"+usernames.map(user => user.username).join(", "))
 
 async function getNewUsername  (req,res) {
   const path = require('path');
-  res.sendFile(path.join(__dirname, '..views/new.html'))
+  res.sendFile(path.join(__dirname, '../views/new.html'))
 }
 
 
