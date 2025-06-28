@@ -19,7 +19,7 @@ const SQL = `
 async function main(){
 
   const client = new Client({
-    connectionString: process.env.DATABASE_URL,
+    connectionString: DATABASE_URL,
   });
 
   await client.connect();
