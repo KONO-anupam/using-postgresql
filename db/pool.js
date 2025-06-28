@@ -1,7 +1,11 @@
-const {Pool} = require('pg')
 require('dotenv').config()
-const { connectionString } = require('pg/lib/defaults')
 
-module.exports = new pool({
-  connectionString = process.env.DATABASE_URL
+const { Pool } = require('pg')
+
+module.exports = new Pool({
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 })
